@@ -29,7 +29,7 @@ namespace MysqlTest
                 string sqlstr = $"insert into orders(OrderID,Customer,Detials) values(" +
                     $"'{order1.Id.ToString()}'," +
                     $"'{order1.Customer.ToString()}'," +
-                    $"{order1.Details.ToString()})";   
+                    $"{order1.Details.ToString()})";
                 MySqlCommand cmd = new MySqlCommand(sqlstr, conn);
 
                 int result = cmd.ExecuteNonQuery();   //返回值为执行后数据库中受影响的数据行数
@@ -45,6 +45,7 @@ namespace MysqlTest
             }
             Console.ReadKey();
         }
+    }
 
 
         
